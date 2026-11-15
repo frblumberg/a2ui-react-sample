@@ -6,7 +6,7 @@ import {useAgentSession} from './lib/useAgentSession';
 const SUGGESTIONS = ['Zählerstand melden', 'Tarife vergleichen', 'Hallo, was kannst du?'];
 
 export function App() {
-  const [brandId, setBrandId] = useState('marke-a');
+  const [brandId, setBrandId] = useState('enbw');
   const [a2uiEnabled, setA2uiEnabled] = useState(true);
   const [showTrace, setShowTrace] = useState(true);
   const [draft, setDraft] = useState('');
