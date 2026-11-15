@@ -1,0 +1,32 @@
+{
+  "name": "a2ui-react-sample",
+  "private": true,
+  "type": "module",
+  "description": "Beispiel-Architektur f\u00fcr A2UI (v0.9): React-Web-Shell, Marken-Katalog, Agent-Gateway, Orchestrator und Fach-Agenten",
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n gateway,web -c blue,green \"npm run dev -w @sample/gateway\" \"npm run dev -w @sample/web-shell\"",
+    "build": "npm run build -w @sample/web-shell",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "catalog:export": "tsx packages/brand-catalog/scripts/export-catalog.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "concurrently": "^10.0.7",
+    "jsdom": "^31.0.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "@a2ui/web_core": "0.15.0"
+  }
+}

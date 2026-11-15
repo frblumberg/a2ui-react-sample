@@ -1,0 +1,17 @@
+{
+  "name": "@sample/brand-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@a2ui/react": "0.15.0",
+    "@a2ui/web_core": "0.15.0",
+    "@sample/shared": "*",
+    "zod": "^3.25.76"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}
