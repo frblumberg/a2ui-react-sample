@@ -1,6 +1,5 @@
 import {createComponentImplementation} from '@a2ui/react/v0_9';
 import {BrandHeaderApi, StatusBannerApi} from './apis';
-import {useBrand} from './brands';
 
 /**
  * React-Implementierungen der Design-System-Komponenten.
@@ -8,12 +7,11 @@ import {useBrand} from './brands';
  */
 
 export const BrandHeader = createComponentImplementation(BrandHeaderApi, ({props}) => {
-  const brand = useBrand();
   return (
     <div className="ds-brand-header">
       <span className="ds-brand-header__mark" aria-hidden="true" />
       <div>
-        <div className="ds-brand-header__eyebrow">{brand.name}</div>
+        <div className="ds-brand-header__eyebrow" aria-hidden="true" />
         <div className="ds-brand-header__title">{props.title}</div>
         {props.subtitle ? <div className="ds-brand-header__subtitle">{props.subtitle}</div> : null}
       </div>

@@ -27,6 +27,7 @@
     "node": ">=20"
   },
   "overrides": {
-    "@a2ui/web_core": "0.15.0"
+    "@a2ui/web_core": "0.15.0",
+    "dompurify": "3.4.18"
   }
 }
