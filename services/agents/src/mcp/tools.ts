@@ -42,7 +42,7 @@ export function createMockTools(): Tools {
   return {
     async 'crm.getCustomer'() {
       return {
-        firstName: 'Alex',
+        firstName: 'Frank',
         contractId: 'V-2026-0815',
         postalCode: '76131',
         meters: [
